@@ -2530,3 +2530,79 @@ footer {
     }
 
 }
+/* RICHESMAKER LOGO */
+
+.brand-symbol {
+    width: 52px !important;
+    height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.brand-symbol img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+@media (max-width: 600px) {
+
+    .brand-symbol {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .brand-symbol img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+}
+@media (max-width: 900px) {
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .nav-contact {
+        display: none !important;
+    }
+
+    .menu-button {
+        display: flex !important;
+    }
+}
+/* =========================================
+   CALCULATOR PAGE NAVBAR
+   ========================================= */
+
+.calculator-page .navbar {
+    background: #421d35 !important;
+}
+
+.calculator-page .desktop-nav a {
+    color: #ffffff !important;
+}
+
+.calculator-page .nav-contact {
+    color: #ffffff !important;
+}
+
+.calculator-page .brand-text strong {
+    color: #ffffff !important;
+}
+
+.calculator-page .brand-text small {
+    color: #ffffff !important;
+}
+
+.calculator-page .menu-button {
+    color: #ffffff !important;
+}
