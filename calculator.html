@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Property Calculators | RichesMaker Real Estate
+    </title>
+
+    <meta
+        name="description"
+        content="RichesMaker property investment and home loan EMI calculators."
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header
+    class="navbar"
+    id="navbar"
+>
+
+    <a
+        href="index.html"
+        class="brand"
+    >
+
+        <div class="brand-symbol">
+            RM
+        </div>
+
+        <div class="brand-text">
+
+            <strong>
+                RICHES<span>MAKER</span>
+            </strong>
+
+            <small>
+                REAL ESTATE
+            </small>
+
+        </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#properties">
+            Properties
+        </a>
+
+        <a href="index.html#locations">
+            Mumbai
+        </a>
+
+        <a href="index.html#expertise">
+            Expertise
+        </a>
+
+        <a
+            href="calculator.html"
+            class="active"
+        >
+            Calculators
+        </a>
+
+        <a href="index.html#about">
+            About
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="nav-right">
+
+        <a
+            class="nav-contact"
+            href="tel:+917777012024"
+        >
+            +91 7777 012 024
+        </a>
+
+        <button
+            class="menu-button"
+            id="openMenu"
+            aria-label="Open Menu"
+        >
+
+            <i data-lucide="menu"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+>
+
+    <button
+        class="mobile-close"
+        id="closeMenu"
+        aria-label="Close Menu"
+    >
+
+        <i data-lucide="x"></i>
+
+    </button>
+
+
+    <div class="mobile-logo">
+
+        RICHES<span>MAKER</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#properties">
+            Properties
+        </a>
+
+        <a href="index.html#locations">
+            Mumbai
+        </a>
+
+        <a href="index.html#expertise">
+            Expertise
+        </a>
+
+        <a href="calculator.html">
+            Calculators
+        </a>
+
+        <a href="index.html#about">
+            About
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <a
+        href="tel:+917777012024"
+        class="mobile-call"
+    >
+        +91 7777 012 024
+    </a>
+
+</div>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     CALCULATOR HERO
+========================================================= -->
+
+<section class="calculator-hero section">
+
+    <div class="section-number">
+        01 / 02
+    </div>
+
+
+    <div class="calculator-hero-content">
+
+        <div class="eyebrow">
+            PROPERTY CALCULATORS
+        </div>
+
+
+        <h1>
+
+            Make the numbers
+            <em>clear.</em>
+
+        </h1>
+
+
+        <p>
+
+            Estimate your property acquisition cost
+            and home loan repayment before making
+            your next move.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INVESTMENT CALCULATOR
+========================================================= -->
+
+<section
+    class="section investment-section"
+    id="investment-calculator"
+>
+
+    <div class="section-label">
+        INVESTMENT CALCULATOR
+    </div>
+
+
+    <div class="calculator-wrapper">
+
+
+        <!-- CALCULATOR CARD -->
+
+        <div class="calculator-card">
+
+
+            <div class="calculator-heading">
+
+                <small>
+                    PROPERTY INVESTMENT
+                </small>
+
+                <h2>
+                    Know your total acquisition cost.
+                </h2>
+
+                <p>
+                    Calculate the approximate cost of
+                    your property including stamp duty
+                    and applicable GST.
+                </p>
+
+            </div>
+
+
+
+            <!-- PURCHASE PRICE -->
+
+            <div class="calculator-field">
+
+                <label for="purchasePrice">
+                    PURCHASE PRICE
+                </label>
+
+
+                <div class="input-prefix">
+
+                    <span>
+                        ₹
+                    </span>
+
+
+                    <input
+                        type="number"
+                        id="purchasePrice"
+                        placeholder="Enter purchase price"
+                        min="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROPERTY STATUS -->
+
+            <div class="calculator-field">
+
+                <label for="propertyStatus">
+                    PROPERTY STATUS
+                </label>
+
+
+                <select id="propertyStatus">
+
+                    <option value="">
+                        Select property status
+                    </option>
+
+                    <option value="ready">
+                        Ready to Move In
+                    </option>
+
+                    <option value="under">
+                        Under Construction
+                    </option>
+
+                    <option value="resale">
+                        Resale
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- STAMP DUTY -->
+
+            <div class="calculator-result-row">
+
+                <div>
+
+                    <span>
+                        STAMP DUTY
+                    </span>
+
+                    <small>
+                        6% fixed
+                    </small>
+
+                </div>
+
+
+                <strong id="stampDutyAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+
+            <!-- GST -->
+
+            <div class="calculator-result-row">
+
+                <div>
+
+                    <span>
+                        GST
+                    </span>
+
+                    <small id="gstRate">
+                        0% applicable
+                    </small>
+
+                </div>
+
+
+                <strong id="gstAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+
+            <!-- TOTAL -->
+
+            <div class="calculator-total">
+
+                <span>
+                    TOTAL ACQUISITION COST
+                </span>
+
+
+                <strong id="totalCost">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="button"
+                class="calculator-button"
+                id="calculateInvestment"
+            >
+
+                CALCULATE
+
+                <span>
+                    ↗
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- INFORMATION -->
+
+        <div class="calculator-info">
+
+            <span class="info-number">
+                01
+            </span>
+
+
+            <h3>
+                A clearer view of your property investment.
+            </h3>
+
+
+            <p>
+
+                Enter the purchase price and select
+                the property status. Stamp duty is
+                calculated at 6%, while GST is applied
+                only to under-construction properties.
+
+            </p>
+
+
+            <div class="info-points">
+
+                <div>
+
+                    <strong>
+                        6%
+                    </strong>
+
+                    <span>
+                        Stamp Duty
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        5%
+                    </strong>
+
+                    <span>
+                        GST on Under Construction
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        0%
+                    </strong>
+
+                    <span>
+                        GST on Ready / Resale
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EMI CALCULATOR
+========================================================= -->
+
+<section
+    class="section emi-section"
+    id="emi-calculator"
+>
+
+    <div class="section-label">
+        HOME LOAN EMI
+    </div>
+
+
+    <div class="calculator-wrapper emi-wrapper">
+
+
+        <!-- INFORMATION -->
+
+        <div class="calculator-info">
+
+            <span class="info-number">
+                02
+            </span>
+
+
+            <h3>
+                Plan your home loan with confidence.
+            </h3>
+
+
+            <p>
+
+                Estimate your monthly EMI based on
+                the loan amount, interest rate and
+                repayment period.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- EMI CARD -->
+
+        <div class="calculator-card">
+
+
+            <div class="calculator-heading">
+
+                <small>
+                    HOME LOAN EMI CALCULATOR
+                </small>
+
+                <h2>
+                    Calculate your monthly EMI.
+                </h2>
+
+            </div>
+
+
+
+            <!-- LOAN AMOUNT -->
+
+            <div class="calculator-field">
+
+                <label for="loanAmount">
+                    LOAN AMOUNT
+                </label>
+
+
+                <div class="input-prefix">
+
+                    <span>
+                        ₹
+                    </span>
+
+
+                    <input
+                        type="number"
+                        id="loanAmount"
+                        placeholder="Enter loan amount"
+                        min="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INTEREST RATE -->
+
+            <div class="calculator-field">
+
+                <label for="interestRate">
+                    INTEREST RATE / YEAR
+                </label>
+
+
+                <div class="input-suffix">
+
+                    <input
+                        type="number"
+                        id="interestRate"
+                        placeholder="e.g. 8.5"
+                        min="0"
+                        step="0.01"
+                    >
+
+                    <span>
+                        %
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TENURE -->
+
+            <div class="calculator-field">
+
+                <label for="loanTenure">
+                    LOAN TENURE
+                </label>
+
+
+                <div class="input-suffix">
+
+                    <input
+                        type="number"
+                        id="loanTenure"
+                        placeholder="e.g. 20"
+                        min="1"
+                        max="40"
+                    >
+
+                    <span>
+                        Years
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MONTHLY EMI -->
+
+            <div class="calculator-total emi-total">
+
+                <span>
+                    MONTHLY EMI
+                </span>
+
+
+                <strong id="monthlyEMI">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+
+            <!-- ADDITIONAL RESULTS -->
+
+            <div class="emi-results">
+
+                <div>
+
+                    <span>
+                        Total Interest
+                    </span>
+
+                    <strong id="totalInterest">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total Amount Payable
+                    </span>
+
+                    <strong id="totalPayment">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="button"
+                class="calculator-button"
+                id="calculateEMI"
+            >
+
+                CALCULATE EMI
+
+                <span>
+                    ↗
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+    <div class="cta-image"></div>
+
+    <div class="cta-overlay"></div>
+
+
+    <div class="cta-content">
+
+        <div class="eyebrow">
+            YOUR NEXT MOVE
+        </div>
+
+
+        <h2>
+
+            Ready to make
+            <em>your move?</em>
+
+        </h2>
+
+
+        <p>
+            Speak with the RichesMaker team
+            about your property requirements.
+        </p>
+
+
+        <div class="cta-buttons">
+
+            <a
+                href="index.html#contact"
+                class="primary-button"
+            >
+
+                Speak With an Advisor
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+
+            <a
+                class="cta-email"
+                href="mailto:info@richesmaker.com"
+            >
+
+                info@richesmaker.com
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                RICHES<span>MAKER</span>
+            </div>
+
+
+            <p>
+
+                Curated real estate.
+                <br>
+                Strategic advice.
+                <br>
+                Mumbai expertise.
+
+            </p>
+
+
+            <div class="rera">
+
+                RERA:
+                A51700035132
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                EXPLORE
+            </h4>
+
+
+            <a href="index.html#properties">
+                Properties
+            </a>
+
+
+            <a href="index.html#locations">
+                Mumbai
+            </a>
+
+
+            <a href="index.html#expertise">
+                Expertise
+            </a>
+
+
+            <a href="calculator.html">
+                Calculators
+            </a>
+
+
+            <a href="index.html#about">
+                About
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                CONNECT
+            </h4>
+
+
+            <a href="tel:+917777012024">
+                +91 7777 012 024
+            </a>
+
+
+            <a href="mailto:info@richesmaker.com">
+                info@richesmaker.com
+            </a>
+
+
+            <a href="https://www.richesmaker.com">
+                www.richesmaker.com
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column office">
+
+            <h4>
+                OFFICE
+            </h4>
+
+
+            <p>
+
+                1703, ArcOne By Lotus Developers,
+                <br>
+                Opp. Citi Mall, Off Link Road,
+                <br>
+                Veera Desai Industrial Estate,
+                <br>
+                Andheri West, Mumbai - 400053.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 RichesMaker Real Estate
+        </span>
+
+
+        <span>
+            RERA: A51700035132
+        </span>
+
+
+        <span>
+            Privacy · Terms
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
+
+<script>
+
+    /*
+     * Initialize Lucide icons
+     */
+
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+    }
+
+
+    /*
+     * Mobile menu
+     */
+
+    const openMenu =
+        document.getElementById("openMenu");
+
+    const closeMenu =
+        document.getElementById("closeMenu");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    if (openMenu && mobileMenu) {
+
+        openMenu.addEventListener(
+            "click",
+            () => {
+
+                mobileMenu.classList.add(
+                    "active"
+                );
+
+            }
+        );
+
+    }
+
+
+    if (closeMenu && mobileMenu) {
+
+        closeMenu.addEventListener(
+            "click",
+            () => {
+
+                mobileMenu.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+    }
+
+
+    /*
+     * Close mobile menu after clicking a link
+     */
+
+    if (mobileMenu) {
+
+        mobileMenu
+            .querySelectorAll("a")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        mobileMenu.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+            });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
