@@ -5038,3 +5038,34 @@ footer {
         right: 20px !important;
     }
 }
+/* =========================================
+   FINAL NAVBAR + CEO IMAGE FIX
+========================================= */
+
+/* Navbar logo spacing */
+.brand-text {
+    margin-left: 8px !important;
+}
+
+/* CEO / About image */
+.about-image {
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Mobile logo spacing */
+@media (max-width: 950px) {
+    .brand-text {
+        margin-left: 5px !important;
+    }
+
+    .mobile-brand-text {
+        margin-left: 5px !important;
+    }
+}
