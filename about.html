@@ -18,6 +18,7 @@
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link
         rel="preconnect"
         href="https://fonts.gstatic.com"
@@ -45,9 +46,7 @@
 
     <div class="nav-inner">
 
-
         <!-- LOGO -->
-
         <a href="index.html" class="brand">
 
             <span class="brand-symbol">
@@ -62,13 +61,9 @@
 
             <span class="brand-text">
 
-                <strong>
-                    RICHES<span>MAKER</span>
-                </strong>
+                <strong>RICHES<span>MAKER</span></strong>
 
-                <small>
-                    REAL ESTATE
-                </small>
+                <small>REAL ESTATE</small>
 
             </span>
 
@@ -79,33 +74,19 @@
 
         <nav class="desktop-nav">
 
-            <a href="index.html">
-                HOME
-            </a>
+            <a href="index.html">HOME</a>
 
-            <a href="properties.html">
-                PROPERTIES
-            </a>
+            <a href="properties.html">PROPERTIES</a>
 
-            <a href="locations.html">
-                MUMBAI
-            </a>
+            <a href="locations.html">MUMBAI</a>
 
-            <a href="services.html">
-                EXPERTISE
-            </a>
+            <a href="services.html">EXPERTISE</a>
 
-            <a href="calculator.html">
-                CALCULATORS
-            </a>
+            <a href="calculator.html">CALCULATORS</a>
 
-            <a href="about.html">
-                ABOUT
-            </a>
+            <a href="about.html">ABOUT</a>
 
-            <a href="contact.html">
-                CONTACT
-            </a>
+            <a href="contact.html">CONTACT</a>
 
         </nav>
 
@@ -117,11 +98,10 @@
             <button
                 class="menu-button"
                 id="openMenu"
+                type="button"
                 aria-label="Open menu"
             >
-
-                <span>☰</span>
-
+                ☰
             </button>
 
         </div>
@@ -141,88 +121,89 @@
     id="mobileMenu"
 >
 
-
-    <!-- CLOSE -->
-
-    <button
-        class="mobile-close"
-        id="closeMenu"
-        aria-label="Close Menu"
-    >
-        ×
-    </button>
+    <div class="mobile-menu-inner">
 
 
-    <!-- MOBILE LOGO -->
+        <!-- MOBILE LOGO -->
 
-    <a
-        href="index.html"
-        class="mobile-brand"
-    >
-
-        <img
-            src="logo.png"
-            alt="RichesMaker"
+        <a
+            href="index.html"
+            class="mobile-brand"
         >
 
-        <span>
+            <img
+                src="logo.png"
+                alt="RichesMaker"
+            >
 
-            <strong>
-                RICHESMAKER
-            </strong>
+            <span class="mobile-brand-text">
 
-            <small>
-                REAL ESTATE
-            </small>
+                <strong>RICHES<span>MAKER</span></strong>
 
-        </span>
+                <small>REAL ESTATE</small>
 
-    </a>
+            </span>
 
-
-    <!-- MOBILE LINKS -->
-
-    <nav>
-
-        <a href="index.html">
-            Home
         </a>
 
-        <a href="properties.html">
-            Properties
+
+        <!-- CLOSE -->
+
+        <button
+            class="mobile-close"
+            id="closeMenu"
+            type="button"
+            aria-label="Close Menu"
+        >
+            ×
+        </button>
+
+
+        <!-- MOBILE LINKS -->
+
+        <nav class="mobile-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="locations.html">
+                Mumbai
+            </a>
+
+            <a href="services.html">
+                Expertise
+            </a>
+
+            <a href="calculator.html">
+                Calculators
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- PHONE -->
+
+        <a
+            href="tel:+917777012024"
+            class="mobile-call"
+        >
+            +91 7777 012 024
         </a>
 
-        <a href="locations.html">
-            Mumbai
-        </a>
-
-        <a href="services.html">
-            Expertise
-        </a>
-
-        <a href="calculator.html">
-            Calculators
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-    </nav>
-
-
-    <!-- PHONE -->
-
-    <a
-        href="tel:+917777012024"
-        class="mobile-call"
-    >
-        +91 7777 012 024
-    </a>
+    </div>
 
 </div>
 
@@ -703,8 +684,9 @@
 
 <script src="script.js"></script>
 
-
 <script>
+
+document.addEventListener("DOMContentLoaded", function () {
 
     const openMenu =
         document.getElementById("openMenu");
@@ -718,9 +700,13 @@
 
     if (openMenu && mobileMenu) {
 
-        openMenu.addEventListener("click", () => {
+        openMenu.addEventListener("click", function (e) {
+
+            e.preventDefault();
 
             mobileMenu.classList.add("active");
+
+            document.body.classList.add("menu-open");
 
         });
 
@@ -729,9 +715,13 @@
 
     if (closeMenu && mobileMenu) {
 
-        closeMenu.addEventListener("click", () => {
+        closeMenu.addEventListener("click", function (e) {
+
+            e.preventDefault();
 
             mobileMenu.classList.remove("active");
+
+            document.body.classList.remove("menu-open");
 
         });
 
@@ -742,17 +732,21 @@
 
         mobileMenu
             .querySelectorAll("a")
-            .forEach(link => {
+            .forEach(function (link) {
 
-                link.addEventListener("click", () => {
+                link.addEventListener("click", function () {
 
                     mobileMenu.classList.remove("active");
+
+                    document.body.classList.remove("menu-open");
 
                 });
 
             });
 
     }
+
+});
 
 </script>
 

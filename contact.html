@@ -46,34 +46,87 @@
 ========================================================= -->
 
 <header class="navbar" id="navbar">
+
     <div class="nav-inner">
+
+        <!-- LOGO -->
         <a href="index.html" class="brand">
+
             <span class="brand-symbol">
-                <img src="logo.png" alt="RichesMaker Logo">
+
+                <img
+                    src="logo.png"
+                    alt="RichesMaker Logo"
+                >
+
             </span>
+
+
             <span class="brand-text">
+
                 <strong>RICHES<span>MAKER</span></strong>
+
                 <small>REAL ESTATE</small>
+
             </span>
+
         </a>
 
+
+        <!-- DESKTOP NAVIGATION -->
+
         <nav class="desktop-nav">
-            <a href="index.html">HOME</a>
-            <a href="properties.html">PROPERTIES</a>
-            <a href="locations.html">MUMBAI</a>
-            <a href="services.html">EXPERTISE</a>
-            <a href="calculator.html">CALCULATORS</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="properties.html">
+                PROPERTIES
+            </a>
+
+            <a href="locations.html">
+                MUMBAI
+            </a>
+
+            <a href="services.html">
+                EXPERTISE
+            </a>
+
+            <a href="calculator.html">
+                CALCULATORS
+            </a>
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
         </nav>
 
+
+        <!-- MOBILE BUTTON -->
+
         <div class="nav-right">
-            <button class="menu-button" id="openMenu" aria-label="Open menu">
-                <i data-lucide="menu"></i>
+
+            <button
+                class="menu-button"
+                id="openMenu"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
             </button>
+
         </div>
+
     </div>
+
 </header>
+
 
 
 <!-- =========================================================
@@ -85,63 +138,89 @@
     id="mobileMenu"
 >
 
-    <button
-        class="mobile-close"
-        id="closeMenu"
-        aria-label="Close Menu"
-    >
-        ×
-    </button>
+    <div class="mobile-menu-inner">
 
 
-    <a href="index.html" class="mobile-brand">
-        <img src="logo.png" alt="RichesMaker Logo">
-        <span>
-            <strong>RICHESMAKER</strong>
-            <small>REAL ESTATE</small>
-        </span>
-    </a>
+        <!-- MOBILE LOGO -->
 
+        <a
+            href="index.html"
+            class="mobile-brand"
+        >
 
-    <nav>
+            <img
+                src="logo.png"
+                alt="RichesMaker"
+            >
 
-        <a href="index.html">
-            Home
+            <span class="mobile-brand-text">
+
+                <strong>RICHES<span>MAKER</span></strong>
+
+                <small>REAL ESTATE</small>
+
+            </span>
+
         </a>
 
-        <a href="properties.html">
-            Properties
+
+        <!-- CLOSE -->
+
+        <button
+            class="mobile-close"
+            id="closeMenu"
+            type="button"
+            aria-label="Close Menu"
+        >
+            ×
+        </button>
+
+
+        <!-- MOBILE LINKS -->
+
+        <nav class="mobile-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="locations.html">
+                Mumbai
+            </a>
+
+            <a href="services.html">
+                Expertise
+            </a>
+
+            <a href="calculator.html">
+                Calculators
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- PHONE -->
+
+        <a
+            href="tel:+917777012024"
+            class="mobile-call"
+        >
+            +91 7777 012 024
         </a>
 
-        <a href="locations.html">
-            Mumbai
-        </a>
-
-        <a href="services.html">
-            Expertise
-        </a>
-
-        <a href="calculator.html">
-            Calculators
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-    </nav>
-
-
-    <a
-        href="tel:+917777012024"
-        class="mobile-call"
-    >
-        +91 7777 012 024
-    </a>
+    </div>
 
 </div>
 
@@ -339,7 +418,6 @@
                     name="_template"
                     value="table"
                 >
-
 
 
                 <!-- NAME -->
@@ -571,9 +649,7 @@
         <div class="footer-brand">
 
             <div class="footer-logo">
-
                 RICHES<span>MAKER</span>
-
             </div>
 
 
@@ -679,17 +755,11 @@
             <p>
 
                 1703, ArcOne By Lotus Developers,
-
                 <br>
-
                 Opp. Citi Mall, Off Link Road,
-
                 <br>
-
                 Veera Desai Industrial Estate,
-
                 <br>
-
                 Andheri West, Mumbai - 400053.
 
             </p>
@@ -733,6 +803,8 @@
 
 <script>
 
+document.addEventListener("DOMContentLoaded", function () {
+
     const openMenu =
         document.getElementById("openMenu");
 
@@ -745,9 +817,11 @@
 
     if (openMenu && mobileMenu) {
 
-        openMenu.addEventListener("click", () => {
+        openMenu.addEventListener("click", function () {
 
             mobileMenu.classList.add("active");
+
+            document.body.classList.add("menu-open");
 
         });
 
@@ -756,9 +830,11 @@
 
     if (closeMenu && mobileMenu) {
 
-        closeMenu.addEventListener("click", () => {
+        closeMenu.addEventListener("click", function () {
 
             mobileMenu.classList.remove("active");
+
+            document.body.classList.remove("menu-open");
 
         });
 
@@ -769,17 +845,21 @@
 
         mobileMenu
             .querySelectorAll("a")
-            .forEach(link => {
+            .forEach(function (link) {
 
-                link.addEventListener("click", () => {
+                link.addEventListener("click", function () {
 
                     mobileMenu.classList.remove("active");
+
+                    document.body.classList.remove("menu-open");
 
                 });
 
             });
 
     }
+
+});
 
 </script>
 

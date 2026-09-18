@@ -22,76 +22,40 @@
 ========================================================= -->
 
 <header class="navbar" id="navbar">
-
     <div class="nav-inner">
 
-        <!-- LOGO -->
-
         <a href="index.html" class="brand">
-
             <span class="brand-symbol">
                 <img src="logo.png" alt="RichesMaker">
             </span>
 
-          <span class="brand-text">
-    <strong>RICHES<span>MAKER</span></strong>
-    <small>REAL ESTATE</small>
-</span>
-
+            <span class="brand-text">
+                <strong>RICHES<span>MAKER</span></strong>
+                <small>REAL ESTATE</small>
+            </span>
         </a>
 
-
-        <!-- DESKTOP NAVIGATION -->
-
         <nav class="desktop-nav">
-
-            <a href="index.html">
-                HOME
-            </a>
-
-            <a href="properties.html">
-                PROPERTIES
-            </a>
-
-            <a href="locations.html">
-                MUMBAI
-            </a>
-
-            <a href="services.html">
-                EXPERTISE
-            </a>
-
-            <a href="calculator.html">
-                CALCULATORS
-            </a>
-
-            <a href="about.html">
-                ABOUT
-            </a>
-
-            <a href="contact.html">
-                CONTACT
-            </a>
-
+            <a href="index.html">HOME</a>
+            <a href="properties.html">PROPERTIES</a>
+            <a href="locations.html">MUMBAI</a>
+            <a href="services.html">EXPERTISE</a>
+            <a href="calculator.html">CALCULATORS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
 
-
-        <!-- MOBILE MENU BUTTON -->
-
         <div class="nav-right">
-
             <button
                 class="menu-button"
-                id="menuButton"
-                aria-label="Open menu"
-            >
+                id="openMenu"
+                type="button"
+                aria-label="Open menu">
                 ☰
             </button>
-
         </div>
 
     </div>
-
 </header>
 
 
@@ -103,71 +67,36 @@
 
     <div class="mobile-menu-inner">
 
-        <!-- MOBILE BRAND -->
-
         <a href="index.html" class="mobile-brand">
-
             <img src="logo.png" alt="RichesMaker">
 
-            <span>
-
-                <strong>
-                    RICHESMAKER
-                </strong>
-
-                <small>
-                    REAL ESTATE
-                </small>
-
+            <span class="mobile-brand-text">
+                <strong>RICHES<span>MAKER</span></strong>
+                <small>REAL ESTATE</small>
             </span>
-
         </a>
-
-
-        <!-- CLOSE BUTTON -->
 
         <button
             class="mobile-close"
-            id="mobileClose"
-            aria-label="Close menu"
-        >
+            id="closeMenu"
+            type="button"
+            aria-label="Close Menu">
             ×
         </button>
 
+        <nav class="mobile-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html">Properties</a>
+            <a href="locations.html">Mumbai</a>
+            <a href="services.html">Expertise</a>
+            <a href="calculator.html">Calculators</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-        <!-- MOBILE LINKS -->
-
-        <div class="mobile-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="properties.html">
-                Properties
-            </a>
-
-            <a href="locations.html">
-                Mumbai
-            </a>
-
-            <a href="services.html">
-                Expertise
-            </a>
-
-            <a href="calculator.html">
-                Calculators
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
+        <a href="tel:+917777012024" class="mobile-call">
+            +91 7777 012 024
+        </a>
 
     </div>
 
@@ -223,7 +152,6 @@
 
         </div>
 
-
         <p>
             From established luxury neighbourhoods to rapidly evolving
             corridors, Mumbai offers a wide range of residential
@@ -255,7 +183,6 @@
             </h2>
 
         </div>
-
 
         <p>
             Different neighbourhoods serve different lifestyles
@@ -573,6 +500,45 @@
 ========================================================= -->
 
 <script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const openMenu = document.getElementById("openMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (openMenu && mobileMenu) {
+        openMenu.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            mobileMenu.classList.add("active");
+            document.body.classList.add("menu-open");
+        });
+    }
+
+    if (closeMenu && mobileMenu) {
+        closeMenu.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            mobileMenu.classList.remove("active");
+            document.body.classList.remove("menu-open");
+        });
+    }
+
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+
+                mobileMenu.classList.remove("active");
+                document.body.classList.remove("menu-open");
+
+            });
+        });
+    }
+
+});
+</script>
 
 </body>
 </html>

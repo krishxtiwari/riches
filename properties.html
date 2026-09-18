@@ -52,9 +52,6 @@
 
     <div class="nav-inner">
 
-
-        <!-- LOGO -->
-
         <a
             href="index.html"
             class="brand"
@@ -84,9 +81,6 @@
 
         </a>
 
-
-
-        <!-- DESKTOP NAV -->
 
         <nav class="desktop-nav">
 
@@ -121,14 +115,12 @@
         </nav>
 
 
-
-        <!-- MOBILE BUTTON ONLY -->
-
         <div class="nav-right">
 
             <button
                 class="menu-button"
-                id="menuButton"
+                id="openMenu"
+                type="button"
                 aria-label="Open menu"
             >
                 ☰
@@ -139,7 +131,6 @@
     </div>
 
 </header>
-
 
 
 <!-- =========================================================
@@ -164,10 +155,10 @@
                 alt="RichesMaker"
             >
 
-            <span>
+            <span class="mobile-brand-text">
 
                 <strong>
-                    RICHESMAKER
+                    RICHES<span>MAKER</span>
                 </strong>
 
                 <small>
@@ -181,13 +172,15 @@
 
         <button
             class="mobile-close"
-            id="mobileClose"
+            id="closeMenu"
+            type="button"
+            aria-label="Close Menu"
         >
             ×
         </button>
 
 
-        <div class="mobile-links">
+        <nav class="mobile-links">
 
             <a href="index.html">
                 Home
@@ -217,7 +210,15 @@
                 Contact
             </a>
 
-        </div>
+        </nav>
+
+
+        <a
+            href="tel:+917777012024"
+            class="mobile-call"
+        >
+            +91 7777 012 024
+        </a>
 
     </div>
 
@@ -641,6 +642,53 @@
 
 
 <script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const openMenu = document.getElementById("openMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (openMenu && mobileMenu) {
+
+        openMenu.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            mobileMenu.classList.add("active");
+            document.body.classList.add("menu-open");
+        });
+
+    }
+
+    if (closeMenu && mobileMenu) {
+
+        closeMenu.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            mobileMenu.classList.remove("active");
+            document.body.classList.remove("menu-open");
+        });
+
+    }
+
+    if (mobileMenu) {
+
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mobileMenu.classList.remove("active");
+                document.body.classList.remove("menu-open");
+
+            });
+
+        });
+
+    }
+
+});
+</script>
 
 
 </body>
