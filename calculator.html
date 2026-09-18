@@ -52,90 +52,158 @@
      NAVBAR
 ========================================================= -->
 
-<header
-    class="navbar"
-    id="navbar"
->
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
 
-    <a
-        href="index.html"
-        class="brand"
-    >
+<header class="navbar" id="navbar">
 
-       <div class="brand-symbol">
-    <img src="logo.png" alt="RichesMaker Logo">
-</div>
-        <div class="brand-text">
+    <div class="nav-inner">
 
-            <strong>
-                RICHES<span>MAKER</span>
-            </strong>
+        <!-- LOGO -->
 
-            <small>
-                REAL ESTATE
-            </small>
+        <a href="index.html" class="brand">
+
+            <span class="brand-symbol">
+                <img src="logo.png" alt="RichesMaker Logo">
+            </span>
+
+            <span class="brand-text">
+                <strong>RICHES<span>MAKER</span></strong>
+                <small>REAL ESTATE</small>
+            </span>
+
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="desktop-nav">
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="properties.html">
+                PROPERTIES
+            </a>
+
+            <a href="locations.html">
+                MUMBAI
+            </a>
+
+            <a href="services.html">
+                EXPERTISE
+            </a>
+
+            <a href="calculator.html">
+                CALCULATORS
+            </a>
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+        </nav>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <div class="nav-right">
+
+            <button
+                class="menu-button"
+                id="openMenu"
+                aria-label="Open menu"
+            >
+                <i data-lucide="menu"></i>
+            </button>
 
         </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button
+        class="mobile-close"
+        id="closeMenu"
+        aria-label="Close Menu"
+    >
+        <i data-lucide="x"></i>
+    </button>
+
+
+    <!-- MOBILE LOGO -->
+
+    <a href="index.html" class="mobile-brand">
+
+        <img src="logo.png" alt="RichesMaker">
+
+        <span>
+            <strong>RICHESMAKER</strong>
+            <small>REAL ESTATE</small>
+        </span>
 
     </a>
 
 
-    <nav class="desktop-nav">
+    <!-- MOBILE LINKS -->
+
+    <nav>
 
         <a href="index.html">
             Home
         </a>
 
-        <a href="index.html#properties">
+        <a href="properties.html">
             Properties
         </a>
 
-        <a href="index.html#locations">
+        <a href="locations.html">
             Mumbai
         </a>
 
-        <a href="index.html#expertise">
+        <a href="services.html">
             Expertise
         </a>
 
-        <a
-            href="calculator.html"
-            class="active"
-        >
+        <a href="calculator.html">
             Calculators
         </a>
 
-        <a href="index.html#about">
+        <a href="about.html">
             About
         </a>
 
-        <a href="index.html#contact">
+        <a href="contact.html">
             Contact
         </a>
 
     </nav>
 
 
-    <div class="nav-right">
+    <!-- PHONE -->
 
-        <a
-            class="nav-contact"
-            href="tel:+917777012024"
-        >
-            +91 7777 012 024
-        </a>
+    <a
+        href="tel:+917777012024"
+        class="mobile-call"
+    >
+        +91 7777 012 024
+    </a>
 
-        <button
-            class="menu-button"
-            id="openMenu"
-            aria-label="Open Menu"
-        >
-
-            <i data-lucide="menu"></i>
-
-        </button>
-
-    </div>
+</div>
 
 </header>
 
@@ -382,7 +450,27 @@
 
             </div>
 
+<!-- REGISTRATION -->
 
+<div class="calculator-result-row">
+
+    <div>
+
+        <span>
+            REGISTRATION
+        </span>
+
+        <small>
+            ₹40,000 fixed
+        </small>
+
+    </div>
+
+    <strong id="registrationAmount">
+        ₹40,000
+    </strong>
+
+</div>
 
             <!-- GST -->
 

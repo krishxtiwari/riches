@@ -782,7 +782,7 @@ function calculateInvestment() {
     const gst = purchasePrice * gstRate;
 
     const totalCost =
-        purchasePrice + stampDuty + gst;
+        purchasePrice + stampDuty + gst+40000;
 
 
     document.getElementById("stampDutyAmount").textContent =
@@ -791,6 +791,10 @@ function calculateInvestment() {
 
     document.getElementById("gstAmount").textContent =
         formatIndianCurrency(gst);
+        
+        document.getElementById("registrationAmount").textContent =
+    formatIndianCurrency(40000);
+
 
 
     document.getElementById("totalCost").textContent =
