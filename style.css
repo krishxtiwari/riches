@@ -5115,3 +5115,54 @@ footer {
         margin-top: 20px !important;
     }
 }
+/* =========================================
+   MOBILE ONLY - FIX DUPLICATE LOGO
+========================================= */
+
+@media (max-width: 950px) {
+
+    /* Keep the main navbar above the mobile menu */
+    .navbar {
+        position: relative !important;
+        z-index: 100000 !important;
+    }
+
+    /* Mobile menu starts BELOW the navbar */
+    .mobile-menu {
+        position: fixed !important;
+        top: 76px !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: calc(100vh - 76px) !important;
+        z-index: 99999 !important;
+    }
+
+    /* COMPLETELY HIDE the duplicate logo */
+    .mobile-menu .mobile-brand,
+    .mobile-menu .mobile-brand img,
+    .mobile-menu .mobile-brand-text {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* Menu links start from the top */
+    .mobile-menu .mobile-links {
+        margin-top: 15px !important;
+        padding-top: 0 !important;
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 600px) {
+
+    .mobile-menu {
+        top: 76px !important;
+        height: calc(100vh - 76px) !important;
+    }
+
+    .mobile-menu .mobile-links {
+        margin-top: 15px !important;
+    }
+}
