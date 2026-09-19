@@ -5166,3 +5166,586 @@ footer {
         margin-top: 15px !important;
     }
 }
+/* =====================================================
+   FINAL MOBILE MENU FIX
+===================================================== */
+
+@media (max-width: 950px) {
+
+    /* Main navbar */
+    .navbar {
+        position: relative !important;
+        height: 76px !important;
+        z-index: 100000 !important;
+    }
+
+    .nav-inner {
+        height: 76px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    /* Logo */
+    .brand {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
+
+    .brand-text {
+        margin-left: 5px !important;
+    }
+
+    /* Hamburger */
+    .nav-right {
+        display: flex !important;
+        margin-left: auto !important;
+    }
+
+    .menu-button {
+        display: flex !important;
+    }
+
+
+    /* ===============================
+       MOBILE MENU
+    =============================== */
+
+    .mobile-menu {
+        position: fixed !important;
+        top: 76px !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        width: 100% !important;
+        height: calc(100vh - 76px) !important;
+
+        background: #421d35 !important;
+
+        z-index: 99999 !important;
+
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    .mobile-menu.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+
+
+    /* Remove second logo */
+    .mobile-menu .mobile-brand {
+        display: none !important;
+    }
+
+
+    /* ===============================
+       CLOSE BUTTON
+       ALWAYS TOP RIGHT
+    =============================== */
+
+    .mobile-menu .mobile-close {
+        position: fixed !important;
+
+        top: 88px !important;
+        right: 18px !important;
+
+        width: 36px !important;
+        height: 36px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        background: transparent !important;
+        border: 0 !important;
+
+        color: #ffffff !important;
+
+        font-size: 28px !important;
+        line-height: 1 !important;
+
+        z-index: 100001 !important;
+    }
+
+
+    /* ===============================
+       MENU LINKS
+    =============================== */
+
+    .mobile-menu nav,
+    .mobile-menu .mobile-links {
+        width: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        margin: 55px 20px 0 !important;
+        padding: 0 !important;
+
+        gap: 0 !important;
+    }
+
+    .mobile-menu nav a,
+    .mobile-menu .mobile-links a {
+        display: block !important;
+
+        width: 100% !important;
+
+        padding: 15px 0 !important;
+        margin: 0 !important;
+
+        color: #ffffff !important;
+
+        font-family: "DM Sans", sans-serif !important;
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        line-height: 1.4 !important;
+
+        text-decoration: none !important;
+
+        border-bottom: 1px solid rgba(255,255,255,0.10) !important;
+    }
+
+
+    /* Phone */
+    .mobile-menu .mobile-call {
+        display: inline-block !important;
+
+        margin: 28px 20px !important;
+
+        color: #C6A15B !important;
+
+        font-size: 12px !important;
+        text-decoration: none !important;
+    }
+
+    body.menu-open {
+        overflow: hidden !important;
+    }
+}
+
+
+/* Small phones */
+@media (max-width: 600px) {
+
+    .mobile-menu .mobile-close {
+        top: 88px !important;
+        right: 14px !important;
+    }
+
+    .mobile-menu nav,
+    .mobile-menu .mobile-links {
+        margin: 55px 20px 0 !important;
+    }
+
+    .mobile-menu nav a,
+    .mobile-menu .mobile-links a {
+        font-size: 15px !important;
+        padding: 15px 0 !important;
+    }
+}
+/* =====================================================
+   PROPERTIES PAGE — COLLECTION HEADING FIX
+===================================================== */
+
+.collection-section h2,
+.properties-section h2 {
+    white-space: nowrap !important;
+    line-height: 1.05 !important;
+}
+
+.collection-section h2 em,
+.properties-section h2 em {
+    display: inline !important;
+}
+
+/* Reduce excessive gap before property cards */
+.collection-section .property-grid,
+.properties-section .property-grid {
+    margin-top: 45px !important;
+}
+/* =====================================================
+   PROPERTY CARDS — SAME IMAGE SIZE
+===================================================== */
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.property-card {
+    overflow: hidden;
+}
+
+.property-image {
+    width: 100% !important;
+    height: 540px !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.property-image img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .property-image {
+        height: 420px !important;
+    }
+}
+/* =====================================================
+   PROPERTY CARDS — FINAL CLEAN DESIGN
+===================================================== */
+
+.property-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:32px;
+    align-items:start;
+}
+
+.property-card{
+    background:#ffffff;
+    overflow:hidden;
+    position:relative;
+}
+
+
+/* IMAGE */
+
+.property-image{
+    width:100% !important;
+    height:430px !important;
+    overflow:hidden !important;
+    position:relative !important;
+}
+
+.property-image img{
+    width:100% !important;
+    height:100% !important;
+    display:block !important;
+
+    object-fit:cover !important;
+    object-position:center !important;
+}
+
+
+/* CONTENT */
+
+.property-content{
+    background:#fff !important;
+
+    padding:26px 28px 30px !important;
+
+    position:relative !important;
+    z-index:2 !important;
+}
+
+
+/* LOCATION */
+
+.property-location{
+    display:block !important;
+
+    color:#b28a45 !important;
+
+    font-family:"DM Sans",sans-serif !important;
+
+    font-size:8px !important;
+    font-weight:500 !important;
+
+    letter-spacing:2.5px !important;
+
+    margin:0 0 14px !important;
+
+    position:static !important;
+}
+
+
+/* TITLE */
+
+.property-content h3{
+    color:#29101f !important;
+
+    font-family:"Playfair Display",serif !important;
+
+    font-size:34px !important;
+    font-weight:400 !important;
+
+    line-height:1.12 !important;
+
+    letter-spacing:-.5px !important;
+
+    margin:0 0 12px !important;
+
+    position:static !important;
+}
+
+
+/* DESCRIPTION */
+
+.property-content p{
+    color:#756a71 !important;
+
+    font-family:"DM Sans",sans-serif !important;
+
+    font-size:11px !important;
+
+    line-height:1.7 !important;
+
+    margin:0 !important;
+
+    min-height:auto !important;
+
+    position:static !important;
+}
+
+
+/* FOOTER */
+
+.property-footer{
+    display:flex !important;
+
+    align-items:center !important;
+    justify-content:space-between !important;
+
+    margin-top:24px !important;
+
+    padding-top:17px !important;
+
+    border-top:1px solid rgba(85,39,67,.12) !important;
+
+    position:static !important;
+}
+
+.property-footer span{
+    color:#552743 !important;
+
+    font-family:"DM Sans",sans-serif !important;
+
+    font-size:8px !important;
+
+    font-weight:500 !important;
+
+    letter-spacing:1.5px !important;
+
+    text-transform:uppercase !important;
+}
+
+.property-footer a{
+    color:#b28a45 !important;
+
+    font-size:20px !important;
+
+    line-height:1 !important;
+
+    text-decoration:none !important;
+
+    transition:transform .25s ease !important;
+}
+
+.property-footer a:hover{
+    transform:translateX(5px) !important;
+}
+
+
+/* =====================================================
+   DESKTOP — THIRD CARD
+===================================================== */
+
+@media (min-width:901px){
+
+    .property-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:900px){
+
+    .property-grid{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .property-image{
+        height:400px !important;
+    }
+
+    .property-content h3{
+        font-size:32px !important;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:600px){
+
+    .property-grid{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .property-image{
+        height:350px !important;
+    }
+
+    .property-content{
+        padding:23px 22px 26px !important;
+    }
+
+    .property-content h3{
+        font-size:29px !important;
+        line-height:1.15 !important;
+    }
+
+    .property-content p{
+        font-size:11px !important;
+    }
+}
+/* FIX IMAGE JOIN / OVERLAP */
+.property-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 32px !important;
+    row-gap: 50px !important;
+}
+
+.property-card {
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+.property-image {
+    width: 100% !important;
+    height: 430px !important;
+    overflow: hidden !important;
+    display: block !important;
+}
+
+.property-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+@media (max-width: 700px) {
+    .property-grid {
+        grid-template-columns: 1fr !important;
+        column-gap: 0 !important;
+        row-gap: 30px !important;
+    }
+
+    .property-image {
+        height: 350px !important;
+    }
+}
+/* FIX — PRIVATE CLIENT IMAGE SECTION */
+.private-client {
+    min-height: 620px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.private-client .private-image {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.private-client .private-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.private-client .private-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+@media (max-width: 950px) {
+    .private-client {
+        min-height: 560px !important;
+    }
+}
+/* =========================================================
+   FINAL FIX — PRIVATE CLIENT SECTION
+========================================================= */
+
+.private-client {
+    position: relative !important;
+    width: 100% !important;
+    height: 620px !important;
+    min-height: 620px !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.private-client .private-image {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.private-client .private-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.private-client .private-content {
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+@media (max-width: 950px) {
+    .private-client {
+        height: 560px !important;
+        min-height: 560px !important;
+    }
+}
